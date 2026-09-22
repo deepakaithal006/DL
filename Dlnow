@@ -1,0 +1,67 @@
+Program:
+
+from
+
+keras.models import Sequential
+
+import Dense, Activation
+
+momentum=0.9, nesterov=True)
+
+from keras.layers
+
+import numpy as np
+
+import pandas as pd
+
+from sklearn import datasets
+
+iris = datasets.load_iris()
+
+X, y= datasets.load iris( return X y = True)
+
+from sklearn.model selection import train test split
+
+X_train, X_test, y_train, y_test= train_test_split(X, y, test_size=0.40)
+
+Define the network model and its arguments.
+
+# Set the number of neurons/nodes for each layer:
+
+model = Sequential()
+
+model.add (Dense (2, input shape=(4,)))
+
+model.add (Activation('sigmoid'))
+
+model.add (Dense (1))
+
+model.add (Activation('sigmoid'))
+
+#sgd = SGD(1r=0.0001, decay=le-6,
+
+#model.compile(loss='categorical_crossentropy', optimizer=sgd, metrics=['accuracy ) # Compile the model and calculate its accuracy:
+
+model.compile(loss='mean_squared_error', optimizer='sgd', metrics=['accuracy'])
+
+#model.fit (X train, y_train, batch size=32, epochs=3)
+
+Print a summary of the Keras model:
+
+model. summary()
+
+#model.fit (X train, y train)
+
+#model.fit (X train, y train, batch size=32, epochs=300)
+
+model.fit (X train, y train, epochs=5)
+
+score = model.evaluate (X test, y test)
+
+print (score)
+
+Page 19
+
+Q
+
++
